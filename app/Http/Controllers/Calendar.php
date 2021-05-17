@@ -21,6 +21,7 @@ class Calendar extends Controller
         $model->event_description = request('event_description');
         $model->start_date = request('start_date');
         $model->end_date = request('end_date');
+        $model->event_color = request('event_color')??'#3568ba';
         if ($model->save()) {
             return \redirect('/home')->with('status', 'Successful saved');
         }
