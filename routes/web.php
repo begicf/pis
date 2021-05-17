@@ -20,4 +20,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::any('/create_event','\App\Http\Controllers\Calendar@index')->name('create');
+
+
+Route::any('/create_event', ['middleware' => 'auth', 'uses' => '\App\Http\Controllers\Calendar@index'])->name('create_event');
+Route::any('/new_create', ['middleware' => 'auth', 'uses' => '\App\Http\Controllers\Calendar@event'])->name('new_create');
+

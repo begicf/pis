@@ -15,14 +15,14 @@ class Calendar extends Migration
     {
         Schema::create('calendar', function (Blueprint $table) {
             $table->id();
-            $table->integer('event_id')->unique();
+            $table->string('event_id')->unique();
             $table->text('event_name');
             $table->text('event_description');
             $table->date('start_date');
             $table->date('end_date');
-            $table->string('event_color');
-            $table->integer('user_id');
-            $table->boolean('delete');
+            $table->string('event_color')->nullable();
+            $table->integer('user_id')->nullable();
+            $table->boolean('delete')->nullable();
             $table->timestamp('action_at')->useCurrent();
         });
     }
