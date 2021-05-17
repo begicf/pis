@@ -34,6 +34,6 @@ class Calendar extends Model
             $prepared_events[] = $temp_event;
         }
 
-        return json_encode($prepared_events);
+        return $prepared_events;
     }
 }

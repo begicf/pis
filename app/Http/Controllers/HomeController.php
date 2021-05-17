@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 class HomeController extends Controller
 {
     /**
@@ -23,6 +21,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home',['event'=>\App\Models\Calendar::prepareEventsJson()]);
+
+        $event = \App\Models\Calendar::prepareEventsJson();
+
+        return view('home', compact('event'));
+
     }
 }

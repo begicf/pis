@@ -26,11 +26,22 @@
         </div>
     </div>
 
+
+    <div id="eventContent">
+        <div id="eventInfo"></div>
+    </div>
+
+    <div class="hidden">
+        <form id="edit_remove_form" action="/edit_or_remove_event/" method="get">
+            <input type="hidden" id="event_id" name="id" />
+        </form>
+    </div>
+
     <script type="text/javascript">
         //inicijalizacija kalendara
         $(document).ready(function () {
             $(function () {
-                initializeCalendar('calendar', '{{$event}}', '');
+                initializeCalendar('calendar', '@json($event)', '');
             });
         });
 

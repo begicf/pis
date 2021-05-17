@@ -1,7 +1,7 @@
 //inicijalizacija kalendara
 function initializeCalendar(calendar_id, events, can_user_edit) {
     var calendar_full_id = "#" + calendar_id;
-    console.log(events);
+
     $(calendar_full_id).fullCalendar({
         header: {
             center: "month, listYear"
@@ -16,7 +16,7 @@ function initializeCalendar(calendar_id, events, can_user_edit) {
         },
         //events je json formatiran za prikaz ovdje: id, event_id, title, start, end - ako nije null i description
 
-        events: events,
+        events: JSON.parse(events),
         aspectRatio: 2,
         eventColor: "#3568ba", //defaultna boja koja se ne gleda ukoliko event ima svoju boju
         themeSystem: "standard",
