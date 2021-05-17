@@ -18,8 +18,8 @@ class Calendar extends Migration
             $table->string('event_id')->unique();
             $table->text('event_name');
             $table->text('event_description');
-            $table->date('start_date');
-            $table->date('end_date');
+            $table->timestamp('start_date');
+            $table->timestamp('end_date');
             $table->string('event_color')->nullable();
             $table->integer('user_id')->nullable();
             $table->boolean('delete')->nullable();

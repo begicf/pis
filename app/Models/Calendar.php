@@ -21,10 +21,10 @@ class Calendar extends Model
             $temp_event['id'] = $event['id'];
             $temp_event['resourceId'] = $event['event_id'];
             $temp_event['title'] = $event['event_name'];
-            $temp_event['start'] = date('Y-m-d', strtotime($event['start_date']));
+            $temp_event['start'] = $event['start_date'];
             if (!empty($event['end_date']))
                 $temp_event['end'] =
-                    date('Y-m-d', strtotime('+1 day', strtotime($event['end_date']))); //+1 dan je zbog toga što fullcalendar ne uključuje datum kraja
+                    $event['end_date']; //+1 dan je zbog toga što fullcalendar ne uključuje datum kraja
             else
                 //mora se raditi unset jer ukoliko imamo jedan sa end-om, te nakon njega drugi bez, ostat ce isti end i za taj iza
                 unset($temp_event['end']);

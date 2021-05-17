@@ -4,15 +4,21 @@ function initializeCalendar(calendar_id, events, can_user_edit) {
 
     $(calendar_full_id).fullCalendar({
         header: {
-            center: "month, listYear"
+            center: "month, listYear",
+            right: 'month, agendaWeek, agendaDay',
+            ignoreTimezone: false
         },
+        week: true,
+        day: true,
+        agenda: true,
+        basic: true,
         views: {
             listYear: {
                 type: "listYear",
                 duration: { years: 1 },
                 buttonText: "Godina",
                 noEventsMessage: "Lista događaja je prazna"
-            }
+            },
         },
         //events je json formatiran za prikaz ovdje: id, event_id, title, start, end - ako nije null i description
 
@@ -35,7 +41,8 @@ function initializeCalendar(calendar_id, events, can_user_edit) {
         },
         eventClick:  function(event, jsEvent, view) {
             setAlert(event, can_user_edit);
-        }
+        },
+
     });
 }
 

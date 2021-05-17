@@ -57,7 +57,7 @@
                                     <div class="col-md-6">
                                         <label>Datum događaja</label>
                                         <input class="form-control requ" name="start_date" id="start_date"
-                                               type="date"/>
+                                               type="datetime-local"/>
                                         <p class="help-block"><span style="color:red">*</span>datum početka događaja
                                         </p>
                                     </div>
@@ -68,7 +68,7 @@
                                     <div class="col-md-6">
                                         <label>Datum kraja</label>
                                         <input class="form-control requ" name="end_date" id="end_date"
-                                               type="date"/>
+                                               type="datetime-local"/>
                                         <p class="help-block"><span style="color:red">*</span>datum kraja događaja
                                         </p>
                                     </div>
