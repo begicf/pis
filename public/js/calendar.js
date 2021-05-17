@@ -19,7 +19,13 @@ function initializeCalendar(calendar_id, events, can_user_edit) {
                 buttonText: "Godina",
                 noEventsMessage: "Lista događaja je prazna"
             },
+            week: {
+                timeFormat: 'H:mm'
+            },
         },
+        timezone: 'Europe/Sarajevo',
+        timeFormat: 'HH:mm',
+        slotLabelFormat:"HH:mm",
         //events je json formatiran za prikaz ovdje: id, event_id, title, start, end - ako nije null i description
 
         events: JSON.parse(events),
