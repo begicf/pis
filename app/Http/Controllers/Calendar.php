@@ -15,7 +15,7 @@ class Calendar extends Controller
     {
 
         $model = new \App\Models\Calendar();
-dd(request()->all());
+
         $model->event_id = uniqid();
         $model->event_name = request('event_name');
         $model->event_description = request('event_description');
