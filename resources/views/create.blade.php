@@ -36,7 +36,7 @@
                         <div class="card-body">
                             <form id="form" class="form-horizontal"
                                   action="<?= isset($_event) ? '/submit_edit_remove/' : "/new_create/"; ?>"
-                                  method="post" onsubmit="return validateNotEmpty();">
+                                  method="get" onsubmit="return validateNotEmpty();">
                                 @csrf
                                 <?php if (isset($_event)) { ?>
                                 <input type="hidden" name="id" value="<?= $_event['id']; ?>"/>
