@@ -412,7 +412,7 @@
 
     <div class="max-w-6xl mx-auto sm:px-6 lg:px-8" style="font-size: 50px;color: darkred">
 
-        <b>PIS</b>
+        <b>POS</b>
     </div>
 </div>
 </body>
