@@ -83,6 +83,20 @@
                                     </div>
                                 </div>
 
+
+                                <div class="form-group">
+                                    <label>Color</label>
+                                    <div class="col-md-12">
+                                        <select name="event_color" class="form-control">
+                                            <option ></option>
+                                            <option value="#ecca00">Yellow</option>
+                                            <option value="#FF0000">Red</option>
+                                            <option value="#008000">Green</option>
+                                            <option selected value="#3568ba">Blue</option>
+                                        </select>
+                                    </div>
+                                </div>
+
                                 <div class="form-group">
                                     <div class="col-lg-12">
                                         <a class="btn btn-danger" value="nazad" href="/home"><span
