@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 
 class Calendar extends Model
 {
@@ -15,7 +16,7 @@ class Calendar extends Model
     public static function prepareEventsJson()
     {
         $prepared_events = [];
-        $events = self::all()->toArray();
+        $events = self::query()->where('user_id','=',Auth::id())->get()->toArray();
 
         foreach ($events as $event) {
             $temp_event['id'] = $event['id'];
