@@ -23,6 +23,7 @@ class Calendar extends Controller
         $model->end_date = request('end_date');
         $model->event_color = request('event_color') ?? '#3568ba';
         $model->user_id = session_id();
+        $model->delete = request('delete') ?? 0;
         if ($model->save()) {
             return \redirect('/home')->with('status', 'Successful saved');
         }
